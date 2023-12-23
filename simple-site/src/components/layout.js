@@ -2,9 +2,23 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import './layout.css'
 const Layout = ({  children }) => {
+  
+    
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("heading").style.height = "50px";
+      document.getElementById("logo").style.fontSize = "25px";
+    } else {
+      document.getElementById("heading").style.height = "80px";
+      document.getElementById("logo").style.fontSize = "35px";
+    }
+  }
   return (
+  
     <>
-    <div className="heading">
+    <div className="heading" id="heading">
     <div className="container">
       <div className="mainMenu">
       <div className="logo">
@@ -43,7 +57,7 @@ const Layout = ({  children }) => {
       </div>
       </div> 
       </div> 
-     
+    
       <main>
         
         {children}
