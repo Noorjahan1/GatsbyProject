@@ -4,7 +4,7 @@ import './layout.css'
 const Layout = ({  children }) => {
   return (
     <>
-    <div className={className?'headingShrink':"heading"} onScroll={handler}>
+    <div className="heading">
     <div className="container">
       <div className="mainMenu">
       <div className="logo">
