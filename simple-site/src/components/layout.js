@@ -2,16 +2,6 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import './layout.css'
 const Layout = ({  children }) => {
- 
- const[className,setClassName]=React.useState(false);
- const handler=(event)=>{
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    setClassName(true);
-  } else {
-    setClassName(false);
-  }
-
- }
   return (
     <>
     <div className={className?'headingShrink':"heading"} onScroll={handler}>
